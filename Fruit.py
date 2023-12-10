@@ -1,5 +1,6 @@
 class Fruit:
     """Object definition for the class Fruit"""
+    
     def __init__(self, name, form, retail_price, stock_quantity):
         """Method to initialize the attributes"""
         self.name = name
@@ -27,11 +28,9 @@ class Fruit:
 
     def eq_ignore_price_and_stock(self, fruit):
         """Method to change that determines the equality between two fruit objects, ignoring price and stock value"""
-        # a helper equals method for the remove & make_purchase methods that ignores retail_price & quantity
         return self.name == fruit.name and self.form == fruit.form
 
     def eq_ignore_stock(self, fruit):
         """Method to change that determines the equality between two fruit objects, ignoring stock value"""
-        # a helper equals method for the add methods that ignores stock quantity
         return self.name == fruit.name and self.form == fruit.form and \
             self.retail_price == fruit.retail_price
